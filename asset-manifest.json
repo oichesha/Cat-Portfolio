@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Cat-Portfolio/static/css/main.9cb94033.css",
+    "main.js": "/Cat-Portfolio/static/js/main.b8334301.js",
+    "index.html": "/Cat-Portfolio/index.html",
+    "main.9cb94033.css.map": "/Cat-Portfolio/static/css/main.9cb94033.css.map",
+    "main.b8334301.js.map": "/Cat-Portfolio/static/js/main.b8334301.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cb94033.css",
+    "static/js/main.b8334301.js"
+  ]
+}

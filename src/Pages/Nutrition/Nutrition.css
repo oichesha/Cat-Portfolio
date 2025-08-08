@@ -1,0 +1,550 @@
+/* Nutrition Page Styles */
+.nutrition-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.nutrition-header {
+  padding: 2rem 0 4rem;
+  text-align: center;
+  color: white;
+}
+
+.header-content {
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.page-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.page-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Tabs Navigation */
+.tabs-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.tab-button.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom-color: #e74c3c;
+}
+
+.tab-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+}
+
+/* Tab Content */
+.tab-content {
+  background: white;
+  border-radius: 20px 20px 0 0;
+  min-height: 70vh;
+  padding: 3rem 0;
+  margin-top: 2rem;
+}
+
+/* Feeding Guide */
+.feeding-guide h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.age-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.age-button {
+  padding: 1rem 2rem;
+  border: 2px solid #e74c3c;
+  background: white;
+  color: #e74c3c;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.age-button.active {
+  background: #e74c3c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.age-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.2);
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.nutrition-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nutrition-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.nutrition-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.nutrition-card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.tips-section {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 5px solid #e74c3c;
+}
+
+.tips-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tip-item {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #dee2e6;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.tip-item:before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+}
+
+.tip-item:last-child {
+  border-bottom: none;
+}
+
+/* Calculator Section */
+.calculator-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.calculator-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.calculator-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.select-input,
+.number-input {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.select-input:focus,
+.number-input:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.calculate-button {
+  padding: 1.2rem 2rem;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.calculate-button:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.calculator-result {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.result-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.result-number {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+}
+
+.result-note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Food Types Section */
+.food-types-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.food-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.food-type-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 5px solid #e74c3c;
+}
+
+.food-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.food-icon {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.food-type-card h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.pros h4,
+.cons h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.pros ul,
+.cons ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pros li,
+.cons li {
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+/* Toxic Foods Section */
+.toxic-foods-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.warning-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  background: #fff3cd;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  border-left: 5px solid #e74c3c;
+}
+
+.toxic-foods-list {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.toxic-food-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.toxic-food-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.toxic-food-item.high {
+  border-left: 5px solid #dc3545;
+}
+
+.toxic-food-item.medium {
+  border-left: 5px solid #ffc107;
+}
+
+.toxic-food-item.low {
+  border-left: 5px solid #28a745;
+}
+
+.danger-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.danger-badge.high {
+  background: #dc3545;
+  color: white;
+}
+
+.danger-badge.medium {
+  background: #ffc107;
+  color: #333;
+}
+
+.danger-badge.low {
+  background: #28a745;
+  color: white;
+}
+
+.food-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+}
+
+.food-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.emergency-info {
+  background: #dc3545;
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.emergency-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.emergency-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .back-button {
+    position: static;
+    margin-bottom: 2rem;
+  }
+  
+  .tabs-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tab-button {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .nutrition-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .age-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pros-cons {
+    grid-template-columns: 1fr;
+  }
+  
+  .food-types-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .calculator-card {
+    padding: 2rem;
+  }
+  
+  .result-number {
+    font-size: 3rem;
+  }
+}
